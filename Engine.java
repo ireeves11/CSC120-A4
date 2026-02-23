@@ -30,4 +30,13 @@ public class Engine {
         System.out.println("Fuel Remaining: " + currentFuel);
         return currentFuel > 0;
     }
+    public static void main(String[] args) {
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0, 100.0);
+        while (myEngine.go()) {
+            System.out.println("Choo choo!");
+        }
+        System.out.println("Out of fuel.");
+        myEngine.refuel();
+        System.out.println(myEngine.getCurrentFuel());
+    }
 }
