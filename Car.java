@@ -20,8 +20,10 @@ public class Car {
     public Boolean addPassenger(Passenger p){
         if(this.seatsRemaining()>0){
             passengerList.add(p);
+            System.out.println(p + " has boarded!");
             return true;
         }
+        System.out.println("Max capacity! " + p + " could not board.");
         return false;
     }
 
@@ -29,8 +31,10 @@ public class Car {
         int index = passengerList.indexOf(p);
         if(index != -1){
             passengerList.remove(index);
+            System.out.println(p + " has been removed!");
             return true;
         }
+        System.out.println(p + " could not be removed! They were never on board!");
         return false;
     } 
 
@@ -40,6 +44,26 @@ public class Car {
                 System.out.println(passengerList.get(i));
             }
         }
-        System.out.println("This car is EMPTY.");
+        else{
+            System.out.println("This car is EMPTY.");
+        }
+    }
+    public static void main(String[] args) {
+        Passenger anne = new Passenger("Anne");
+        Passenger brad = new Passenger("Brad");
+        Car one = new Car(1);
+
+        System.out.println(one.getCapacity());
+        System.out.println(one.seatsRemaining());
+
+        one.addPassenger(anne);
+        one.removePassenger(brad);
+        one.addPassenger(brad);
+        System.out.println(one.getCapacity());
+        System.out.println(one.seatsRemaining());
+        one.printManifest();
+
+        one.removePassenger(anne);
+        one.printManifest();
     }
 }

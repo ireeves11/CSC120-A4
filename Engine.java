@@ -30,6 +30,7 @@ public class Engine {
         System.out.println("Fuel Remaining: " + currentFuel);
         return currentFuel > 0;
     }
+
     public static void main(String[] args) {
         Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0, 100.0);
         while (myEngine.go()) {
