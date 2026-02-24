@@ -1,6 +1,6 @@
 public class Engine {
     
-    //these are my variables, all private
+    //all private atributes
 
     private FuelType fuel;
     private double maxFuel;

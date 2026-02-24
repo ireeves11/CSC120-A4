@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Train {
 
     /**
-     * private variables
+     * All private atributes
      */
     private Engine theEngine;
     private ArrayList <Car> cars;

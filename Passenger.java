@@ -1,7 +1,7 @@
 public class Passenger {
     
     /**
-     * private variables
+     * all private atributes
      */
     private String name;
 

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Car {
 
     /**
-     * variable all private
+     * all private atributes
      */
     private ArrayList <Passenger> passengerList;
     private int maxCapacity;
